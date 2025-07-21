@@ -123,6 +123,7 @@ export const projects: Project[] = [
     technologies: ['Python', 'Scikit-learn', 'XGBoost', 'Pandas', 'NumPy'],
     category: ['AI/ML', 'Data Science'],
     image: '/projects/Loan_prediction.png',
+    link: 'https://github.com/Boromrop/Cambodia_Loan_Prediction.git',
     details: {
       overview: 'Built a machine learning system for loan approval prediction and risk analysis tailored to Cambodia\'s socio-economic context.',
       features: [

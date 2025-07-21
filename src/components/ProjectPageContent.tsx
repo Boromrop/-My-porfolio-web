@@ -2,7 +2,7 @@
 
 import { projects } from '@/data/projects';
 import { notFound, useParams } from 'next/navigation';
-import { FaCalendar, FaCode, FaTrophy } from 'react-icons/fa';
+import { FaCalendar, FaCode, FaTrophy, FaGithub } from 'react-icons/fa';
 import Image from 'next/image';
 
 
@@ -178,6 +178,27 @@ export default function ProjectPageContent() {
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">{project.date}</p>
               </section>
+
+              {/* GitHub Link */}
+              {project.link && (
+                <section>
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+                    <FaGithub />
+                    Source Code
+                  </h3>
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-gray-800 dark:bg-gray-700 text-white rounded hover:bg-gray-700 dark:hover:bg-gray-600 transition-colors font-medium"
+                  >
+                    View on GitHub
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                </section>
+              )}
 
               {/* Project Document */}
               {project.projectDocument && (
